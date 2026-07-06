@@ -5,8 +5,8 @@
 
 defn main():
   data =: RUN.args:first
-          .replace(/\.ys$/ '.yaml')
-          .read():yaml/load
+          .replace(/.*\// '')
+          .replace(/\.ys$/ '.yaml'):load
 
   markdown =: reduce-kv(language "" data)
 

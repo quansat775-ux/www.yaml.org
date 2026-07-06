@@ -1,3 +1,21 @@
+--- !ys-0
+
+defn yamlscript(site icon)::
+  name: YAMLScript
+  desc: YAMLScript YAML loader
+  site:: site
+  icon:: icon
+  tycs: true
+
+defn yamlstar(site icon)::
+  name: YAMLStar
+  desc: YAML 1.2 loader
+  site:: site
+  icon:: icon
+  tycs: true
+
+
+--- !ys:
 Ada:
 - name: AdaYaml
   desc: Experimental YAML 1.3 implementation in Ada
@@ -48,32 +66,17 @@ C#/.NET:
   site: https://github.com/fjoppe/Legivel
   icon: simple-dotnet
   plus: true
-- name: YAMLStar
-  desc: YAML 1.2 loader
-  site: https://www.nuget.org/packages/YAMLStar
-  icon: simple-dotnet
-  tycs: true
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://www.nuget.org/packages/YAMLScript
-  icon: simple-dotnet
-  tycs: true
+- ! yamlstar('https://www.nuget.org/packages/YAMLStar' 'simple-dotnet')
+- ! yamlscript('https://www.nuget.org/packages/YAMLScript' 'simple-dotnet')
 
 Clojure:
 - name: clj-yaml
   desc: YAML encoding and decoding for Clojure
   site: https://github.com/clj-commons/clj-yaml
   icon: simple-clojure
-- name: YAMLStar
-  desc: YAML 1.2 loader
-  site: https://clojars.org/org.yamlstar/yamlstar
-  icon: simple-clojure
-  tycs: true
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://clojars.org/org.yamlscript/yamlscript
-  icon: simple-clojure
-  tycs: true
+- ! yamlstar('https://clojars.org/org.yamlstar/yamlstar' 'simple-clojure')
+- ! yamlscript('https://clojars.org/org.yamlscript/yamlscript'
+               'simple-clojure')
 
 Common Lisp:
 - name: cl-yaml
@@ -87,11 +90,8 @@ Crystal:
   desc: YAML 1.1 from the standard library
   site: https://crystal-lang.org/api/latest/YAML.html
   icon: material-language-cpp
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://github.com/yaml/yamlscript-crystal
-  icon: material-language-cpp
-  tycs: true
+- ! yamlscript('https://github.com/yaml/yamlscript-crystal'
+               'material-language-cpp')
 
 D:
 - name: D-YAML
@@ -99,22 +99,14 @@ D:
   site: https://github.com/dlang-community/D-YAML
   icon: simple-d
   yts: true
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://code.dlang.org/packages/yamlscript
-  icon: simple-d
-  tycs: true
+- ! yamlscript('https://code.dlang.org/packages/yamlscript' 'simple-d')
 
 Dart:
 - name: yaml
   desc: YAML package for Dart
   site: https://pub.dev/packages/yaml
   icon: simple-dart
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://pub.dev/packages/yamlscript
-  icon: simple-dart
-  tycs: true
+- ! yamlscript('https://pub.dev/packages/yamlscript' 'simple-dart')
 
 Delphi:
 - name: Neslib.Yaml
@@ -126,27 +118,16 @@ Delphi:
   desc: YAML 1.1/1.2 and JSON pure Object Pascal parser
   site: https://github.com/biot2/Yaml.Json.Parser
   icon: material-code-braces
-- name: YAMLStar
-  desc: YAML 1.2 loader
-  site: https://github.com/yaml/yamlstar-delphi
-  icon: material-code-braces
-  tycs: true
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://github.com/yaml/yamlscript-delphi
-  icon: material-code-braces
-  tycs: true
+- ! yamlstar('https://github.com/yaml/yamlstar-delphi' 'material-code-braces')
+- ! yamlscript('https://github.com/yaml/yamlscript-delphi'
+               'material-code-braces')
 
 Elixir:
 - name: yaml-elixir
   desc: YAML support for the Elixir language
   site: https://github.com/KamilLelonek/yaml-elixir
   icon: simple-elixir
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://hex.pm/packages/yamlscript
-  icon: simple-elixir
-  tycs: true
+- ! yamlscript('https://hex.pm/packages/yamlscript' 'simple-elixir')
 
 Erlang:
 - name: yamerl
@@ -163,16 +144,9 @@ Fortran:
   desc: YAML 1.2 implementation in pure Fortran
   site: https://github.com/Goddard-Fortran-Ecosystem/yaFyaml
   icon: material-code-braces
-- name: YAMLStar
-  desc: YAML 1.2 loader
-  site: https://github.com/yaml/yamlstar-fortran
-  icon: material-code-braces
-  tycs: true
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://github.com/yaml/yamlscript-fortran
-  icon: material-code-braces
-  tycs: true
+- ! yamlstar('https://github.com/yaml/yamlstar-fortran' 'material-code-braces')
+- ! yamlscript('https://github.com/yaml/yamlscript-fortran'
+               'material-code-braces')
 
 Go:
 - name: Go-yaml
@@ -189,16 +163,8 @@ Go:
   desc: YAML 1.2 implementation in pure Go
   site: https://github.com/goccy/go-yaml
   icon: simple-go
-- name: YAMLStar
-  desc: YAML 1.2 loader
-  site: https://github.com/yaml/yamlstar-go
-  icon: simple-go
-  tycs: true
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://github.com/yaml/yamlscript-go
-  icon: simple-go
-  tycs: true
+- ! yamlstar('https://github.com/yaml/yamlstar-go' 'simple-go')
+- ! yamlscript('https://github.com/yaml/yamlscript-go' 'simple-go')
 
 Groovy:
 - name: YamlSlurper
@@ -223,11 +189,8 @@ Haskell:
   desc: YAML 1.1 Haskell framework (based on libyaml)
   site: https://hackage.haskell.org/package/yaml
   icon: simple-haskell
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://hackage.haskell.org/package/yamlscript
-  icon: simple-haskell
-  tycs: true
+- ! yamlscript('https://hackage.haskell.org/package/yamlscript'
+               'simple-haskell')
 
 Java:
 - name: SnakeYAML Engine
@@ -252,16 +215,10 @@ Java:
   desc: Java Implementation
   site: https://github.com/OpenHFT/Chronicle-Wire
   icon: material-language-java
-- name: YAMLStar
-  desc: YAML 1.2 loader
-  site: https://central.sonatype.com/artifact/com.yaml/yamlstar
-  icon: material-language-java
-  tycs: true
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://clojars.org/org.yamlscript/yamlscript
-  icon: material-language-java
-  tycs: true
+- ! yamlstar('https://central.sonatype.com/artifact/com.yaml/yamlstar'
+             'material-language-java')
+- ! yamlscript('https://clojars.org/org.yamlscript/yamlscript'
+               'material-language-java')
 
 JavaScript:
 - name: yaml
@@ -275,23 +232,12 @@ JavaScript:
   site: https://github.com/nodeca/js-yaml
   icon: simple-javascript
   demo: https://nodeca.github.io/js-yaml/
-- name: YAMLStar
-  desc: YAML 1.2 loader
-  site: https://www.npmjs.com/package/yamlstar
-  icon: simple-javascript
-  tycs: true
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://www.npmjs.com/package/@yaml/yamlscript
-  icon: simple-javascript
-  tycs: true
+- ! yamlstar('https://www.npmjs.com/package/yamlstar' 'simple-javascript')
+- ! yamlscript('https://www.npmjs.com/package/@yaml/yamlscript'
+               'simple-javascript')
 
 Julia:
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://juliapackages.com/p/yamlscript
-  icon: simple-julia
-  tycs: true
+- ! yamlscript('https://juliapackages.com/p/yamlscript' 'simple-julia')
 
 Kotlin:
 - name: kaml
@@ -309,22 +255,15 @@ Kotlin:
   site: https://github.com/sksamuel/hoplite
   icon: simple-kotlin
   plus: true
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://clojars.org/org.yamlscript/kotlin-yamlscript
-  icon: simple-kotlin
-  tycs: true
+- ! yamlscript('https://clojars.org/org.yamlscript/kotlin-yamlscript'
+               'simple-kotlin')
 
 Lua:
 - name: LuaYAML
   desc: Lua binding for libyaml
   site: https://github.com/arcapos/luayaml
   icon: simple-lua
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://github.com/yaml/yamlscript-lua
-  icon: simple-lua
-  tycs: true
+- ! yamlscript('https://github.com/yaml/yamlscript-lua' 'simple-lua')
 
 MATLAB:
 - name: jsonlab
@@ -345,11 +284,7 @@ Nim:
   icon: material-code-braces
   yts: true
   play: nimyaml
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://github.com/yaml/yamlscript-nim
-  icon: material-code-braces
-  tycs: true
+- ! yamlscript('https://github.com/yaml/yamlscript-nim' 'material-code-braces')
 
 Objective-C:
 - name: YAML.framework
@@ -398,16 +333,8 @@ Perl:
   desc: Pure Perl YAML 1.0 Module
   site: https://metacpan.org/release/YAML
   icon: simple-perl
-- name: YAMLStar
-  desc: YAML 1.2 loader
-  site: https://metacpan.org/pod/YAMLStar
-  icon: simple-perl
-  tycs: true
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://metacpan.org/pod/YAMLScript
-  icon: simple-perl
-  tycs: true
+- ! yamlstar('https://metacpan.org/pod/YAMLStar' 'simple-perl')
+- ! yamlscript('https://metacpan.org/pod/YAMLScript' 'simple-perl')
 
 PHP:
 - name: The Yaml Component
@@ -426,11 +353,7 @@ PHP:
   desc: yaml loader/dumper (YAML 1.?)
   site: https://github.com/mustangostang/spyc
   icon: simple-php
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://packagist.org/packages/yaml/yamlscript
-  icon: simple-php
-  tycs: true
+- ! yamlscript('https://packagist.org/packages/yaml/yamlscript' 'simple-php')
 - name: PHP YAML Parser
   desc: A YAML 1.2 Parser for PHP
   site: https://github.com/taufik-nurrohman/y-a-m-l
@@ -459,27 +382,15 @@ Python:
   desc: Restricted YAML subset
   site: https://pypi.org/project/strictyaml/
   icon: simple-python
-- name: YAMLStar
-  desc: YAML 1.2 loader
-  site: https://pypi.org/project/yamlstar/
-  icon: simple-python
-  tycs: true
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://pypi.org/project/yamlscript/
-  icon: simple-python
-  tycs: true
+- ! yamlstar('https://pypi.org/project/yamlstar/' 'simple-python')
+- ! yamlscript('https://pypi.org/project/yamlscript/' 'simple-python')
 
 R:
 - name: R YAML
   desc: libyaml wrapper
   site: https://github.com/viking/r-yaml
   icon: simple-r
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://github.com/yaml/yamlscript-r
-  icon: simple-r
-  tycs: true
+- ! yamlscript('https://github.com/yaml/yamlscript-r' 'simple-r')
 
 Raku:
 - name: YAMLish
@@ -490,22 +401,14 @@ Raku:
   desc: LibYAML wrapper
   site: https://github.com/tony-o/perl6-libyaml
   icon: material-code-braces
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://raku.land/zef:ingy/YAMLScript
-  icon: material-code-braces
-  tycs: true
+- ! yamlscript('https://raku.land/zef:ingy/YAMLScript' 'material-code-braces')
 
 Ruby:
 - name: psych
   desc: libyaml wrapper (in Ruby core for 1.9.2)
   site: http://github.com/tenderlove/psych
   icon: simple-ruby
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://rubygems.org/gems/yamlscript
-  icon: simple-ruby
-  tycs: true
+- ! yamlscript('https://rubygems.org/gems/yamlscript' 'simple-ruby')
 
 Rust:
 - name: yaml-serde
@@ -527,16 +430,8 @@ Rust:
   site: https://github.com/bourumir-wyngs/serde-saphyr
   icon: simple-rust
   yts: true
-- name: YAMLStar
-  desc: YAML 1.2 loader
-  site: https://crates.io/crates/yamlstar
-  icon: simple-rust
-  tycs: true
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://crates.io/crates/yamlscript
-  icon: simple-rust
-  tycs: true
+- ! yamlstar('https://crates.io/crates/yamlstar' 'simple-rust')
+- ! yamlscript('https://crates.io/crates/yamlscript' 'simple-rust')
 
 Scala:
 - name: circe-yaml
@@ -567,11 +462,7 @@ Swift:
   desc: libyaml wrapper
   site: https://github.com/jpsim/Yams
   icon: simple-swift
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://github.com/yaml/yamlscript-swift
-  icon: simple-swift
-  tycs: true
+- ! yamlscript('https://github.com/yaml/yamlscript-swift' 'simple-swift')
 
 Tcl:
 - name: yaml
@@ -626,8 +517,4 @@ Zig:
   site: https://github.com/pwbh/ymlz
   icon: material-code-braces
   plus: true
-- name: YAMLScript
-  desc: YAMLScript YAML loader
-  site: https://github.com/yaml/yamlscript-zig
-  icon: material-code-braces
-  tycs: true
+- ! yamlscript('https://github.com/yaml/yamlscript-zig' 'material-code-braces')
