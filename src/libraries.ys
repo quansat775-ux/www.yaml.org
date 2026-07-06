@@ -19,14 +19,26 @@ defn main():
 
     YAML data serialization libraries for over 40 modern programming languages!!!
 
-    <div class="badge-legend" markdown>
+    <div class="badge-legend" id="badge-legend" markdown>
       [:material-test-tube:](
       https://github.com/yaml/yaml-test-suite){ .badge .badge-yts target="_blank" }
       Uses the [YAML Test Suite](https://github.com/yaml/yaml-test-suite){ target="_blank" }<br>
       [:material-play-circle:](https://play.yaml.com){ .badge .badge-play target="_blank" }
       Available in the [YAML Playground](https://play.yaml.com){ target="_blank" }<br>
       [:material-heart:](https://yaml.com){ .badge .badge-tycs target="_blank" }
-      Supported by [The YAML Company](https://yaml.com){ target="_blank" }
+      Supported by [The YAML Company](https://yaml.com){ target="_blank" }<br>
+      [**1.2**](https://yaml.org/spec/1.2.2/){ .badge .badge-v12 target="_blank" }
+      Supports [YAML 1.2](https://yaml.org/spec/1.2.2/){ target="_blank" }<br>
+      [:material-pulse:](#badge-legend){ .badge .badge-active }
+      Actively maintained (updated within the last year)<br>
+      [:material-leaf:](#badge-legend){ .badge .badge-pure }
+      Pure implementation (no native library dependency)<br>
+      [:material-shield-check:](#badge-legend){ .badge .badge-safe }
+      Safe loading by default (no arbitrary object construction)<br>
+      [:material-merge:](https://yaml.org/type/merge.html){ .badge .badge-merge target="_blank" }
+      Supports [merge keys](https://yaml.org/type/merge.html){ target="_blank" }<br>
+      [:material-comment-check:](#badge-legend){ .badge .badge-comments }
+      Preserves comments (round-trip editing)
     </div>
 
     ---
@@ -46,6 +58,9 @@ defn section(section yaml):
   name site icon desc yts tycs play =:
     yaml.slice(qw(name site icon desc yts tycs play))
 
+  v12 active comments pure safe merge license =:
+    yaml.slice(qw(v12 active comments pure safe merge license))
+
   yts-badge =:
     when yts:
       ' [:material-test-tube:](https://github.com/yaml/yaml-test-suite "Uses YAML Test Suite"){ .badge .badge-yts target="_blank" }'
@@ -58,9 +73,42 @@ defn section(section yaml):
     when play:
       " [:material-play-circle:](https://play.yaml.com?show=$play \"Available in the YAML Playground\"){ .badge .badge-play target=\"_blank\" }"
 
+  v12-badge =:
+    when v12:
+      ' [**1.2**](https://yaml.org/spec/1.2.2/ "Supports YAML 1.2"){ .badge .badge-v12 target="_blank" }'
+
+  active-badge =:
+    when active:
+      ' [:material-pulse:](#badge-legend "Actively maintained"){ .badge .badge-active }'
+
+  pure-badge =:
+    when pure:
+      ' [:material-leaf:](#badge-legend "Pure implementation"){ .badge .badge-pure }'
+
+  safe-badge =:
+    when safe:
+      ' [:material-shield-check:](#badge-legend "Safe loading by default"){ .badge .badge-safe }'
+
+  merge-badge =:
+    when merge:
+      ' [:material-merge:](https://yaml.org/type/merge.html "Supports merge keys"){ .badge .badge-merge target="_blank" }'
+
+  comments-badge =:
+    when comments:
+      ' [:material-comment-check:](#badge-legend "Preserves comments"){ .badge .badge-comments }'
+
+  badges =:
+    str: tycs-badge play-badge yts-badge v12-badge
+         active-badge pure-badge safe-badge merge-badge
+         comments-badge
+
+  license-note =:
+    when license:
+      "\n\n    <small class=\"license\">$license</small>"
+
   section +: |+
-    -   :$icon:{ .lg .middle } **[$name]($site){ target="_blank" }**$tycs-badge$play-badge$yts-badge
+    -   :$icon:{ .lg .middle } **[$name]($site){ target="_blank" }**$badges
 
         ---
 
-        $desc
+        $desc$license-note
