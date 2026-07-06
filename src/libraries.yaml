@@ -99,12 +99,22 @@ D:
   site: https://github.com/dlang-community/D-YAML
   icon: simple-d
   yts: true
+- name: YAMLScript
+  desc: YAMLScript YAML loader
+  site: https://code.dlang.org/packages/yamlscript
+  icon: simple-d
+  tycs: true
 
 Dart:
 - name: yaml
   desc: YAML package for Dart
   site: https://pub.dev/packages/yaml
   icon: simple-dart
+- name: YAMLScript
+  desc: YAMLScript YAML loader
+  site: https://pub.dev/packages/yamlscript
+  icon: simple-dart
+  tycs: true
 
 Delphi:
 - name: Neslib.Yaml
@@ -121,12 +131,22 @@ Delphi:
   site: https://github.com/yaml/yamlstar-delphi
   icon: material-code-braces
   tycs: true
+- name: YAMLScript
+  desc: YAMLScript YAML loader
+  site: https://github.com/yaml/yamlscript-delphi
+  icon: material-code-braces
+  tycs: true
 
 Elixir:
 - name: yaml-elixir
   desc: YAML support for the Elixir language
   site: https://github.com/KamilLelonek/yaml-elixir
   icon: simple-elixir
+- name: YAMLScript
+  desc: YAMLScript YAML loader
+  site: https://hex.pm/packages/yamlscript
+  icon: simple-elixir
+  tycs: true
 
 Erlang:
 - name: yamerl
@@ -146,6 +166,11 @@ Fortran:
 - name: YAMLStar
   desc: YAML 1.2 loader
   site: https://github.com/yaml/yamlstar-fortran
+  icon: material-code-braces
+  tycs: true
+- name: YAMLScript
+  desc: YAMLScript YAML loader
+  site: https://github.com/yaml/yamlscript-fortran
   icon: material-code-braces
   tycs: true
 
@@ -284,6 +309,11 @@ Kotlin:
   site: https://github.com/sksamuel/hoplite
   icon: simple-kotlin
   plus: true
+- name: YAMLScript
+  desc: YAMLScript YAML loader
+  site: https://clojars.org/org.yamlscript/kotlin-yamlscript
+  icon: simple-kotlin
+  tycs: true
 
 Lua:
 - name: LuaYAML
@@ -315,6 +345,11 @@ Nim:
   icon: material-code-braces
   yts: true
   play: nimyaml
+- name: YAMLScript
+  desc: YAMLScript YAML loader
+  site: https://github.com/yaml/yamlscript-nim
+  icon: material-code-braces
+  tycs: true
 
 Objective-C:
 - name: YAML.framework
@@ -440,6 +475,11 @@ R:
   desc: libyaml wrapper
   site: https://github.com/viking/r-yaml
   icon: simple-r
+- name: YAMLScript
+  desc: YAMLScript YAML loader
+  site: https://github.com/yaml/yamlscript-r
+  icon: simple-r
+  tycs: true
 
 Raku:
 - name: YAMLish
@@ -527,6 +567,11 @@ Swift:
   desc: libyaml wrapper
   site: https://github.com/jpsim/Yams
   icon: simple-swift
+- name: YAMLScript
+  desc: YAMLScript YAML loader
+  site: https://github.com/yaml/yamlscript-swift
+  icon: simple-swift
+  tycs: true
 
 Tcl:
 - name: yaml
@@ -581,3 +626,8 @@ Zig:
   site: https://github.com/pwbh/ymlz
   icon: material-code-braces
   plus: true
+- name: YAMLScript
+  desc: YAMLScript YAML loader
+  site: https://github.com/yaml/yamlscript-zig
+  icon: material-code-braces
+  tycs: true
