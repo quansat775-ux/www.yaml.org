@@ -8,7 +8,8 @@ defn main():
           .replace(/.*\// '')
           .replace(/\.ys$/ '.yaml'):load
 
-  markdown =: reduce-kv(language "" data)
+  icons =: data.icons
+  markdown =: reduce-kv((language + icons) "" data.dissoc('icons'))
 
   say: |-
     ---
@@ -45,13 +46,17 @@ defn main():
 
     $(markdown:trim)
 
-defn language(markdown lang yamls): |
-  $markdown
-  ## $lang
+defn language(icons markdown lang yamls):
+  icon =: icons.$lang ||
+    die("No icons entry for language '$lang'")
+  yamls .=: map(\(merge({'icon' icon} _)))
+  =>: |
+    $markdown
+    ## $lang
 
-  <div class="grid cards" markdown>
+    <div class="grid cards" markdown>
 
-  $(reduce(section "" yamls))</div>
+    $(reduce(section "" yamls))</div>
 
 
 defn section(section yaml):

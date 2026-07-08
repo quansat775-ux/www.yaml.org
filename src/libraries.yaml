@@ -1,21 +1,19 @@
 --- !ys-0
 
-defn yamlscript(site icon)::
+defn yamlscript(site)::
   name: YAMLScript
   desc: YAMLScript YAML loader
   site:: site
-  icon:: icon
   tycs: true
   v12: true
   active: true
   merge: true
   license: MIT
 
-defn yamlstar(site icon)::
+defn yamlstar(site)::
   name: YAMLStar
   desc: YAML 1.2 loader
   site:: site
-  icon:: icon
   tycs: true
   v12: true
   active: true
@@ -23,11 +21,56 @@ defn yamlstar(site icon)::
 
 
 --- !ys:
+icons:
+  Ada: material-code-braces
+  C: simple-c
+  C++: simple-cplusplus
+  C#/.NET: simple-dotnet
+  Clojure: simple-clojure
+  Common Lisp: material-code-braces
+  Crystal: material-language-cpp
+  D: simple-d
+  Dart: simple-dart
+  Delphi / Free Pascal: material-code-braces
+  Elixir: simple-elixir
+  Erlang: simple-erlang
+  Fortran: material-code-braces
+  Go: simple-go
+  Groovy: material-code-braces
+  Haskell: simple-haskell
+  Java: material-language-java
+  JavaScript: simple-javascript
+  Julia: simple-julia
+  Kotlin: simple-kotlin
+  Lua: simple-lua
+  MATLAB / Octave: material-code-braces
+  ML: material-code-braces
+  Nim: material-code-braces
+  Objective-C: material-code-braces
+  OCaml: material-code-braces
+  Perl: simple-perl
+  PHP: simple-php
+  PowerShell: material-powershell
+  Python: simple-python
+  R: simple-r
+  Raku: material-code-braces
+  Ruby: simple-ruby
+  Rust: simple-rust
+  Scala: material-code-braces
+  Scheme: material-code-braces
+  Shell: material-console
+  Swift: simple-swift
+  Tcl: material-code-braces
+  TypeScript: simple-typescript
+  Typst: material-code-braces
+  V: material-code-braces
+  Vim: simple-vim
+  Zig: material-code-braces
+
 Ada:
 - name: AdaYaml
   desc: Experimental YAML 1.3 implementation in Ada
   site: https://github.com/yaml/AdaYaml
-  icon: material-code-braces
   plus: true
   pure: true
   license: MIT
@@ -36,7 +79,6 @@ C:
 - name: libyaml
   desc: '"C" Fast YAML 1.1'
   site: http://pyyaml.org/wiki/LibYAML
-  icon: simple-c
   yts: true
   tycs: true
   play: libyaml
@@ -46,7 +88,6 @@ C:
 - name: libfyaml
   desc: '"C" YAML 1.2 processor'
   site: https://github.com/pantoniou/libfyaml
-  icon: simple-c
   yts: true
   play: libfyaml
   v12: true
@@ -56,7 +97,6 @@ C:
 - name: libcyaml
   desc: YAML de/serialization of C data (using libyaml)
   site: https://github.com/tlsa/libcyaml
-  icon: simple-c
   active: true
   license: ISC
 
@@ -64,14 +104,12 @@ C++:
 - name: rapidyaml
   desc: Fast C++ YAML parser and emitter
   site: https://github.com/biojppm/rapidyaml
-  icon: simple-cplusplus
   active: true
   pure: true
   license: MIT
 - name: yaml-cpp
   desc: C++ YAML 1.2 implementation
   site: https://github.com/jbeder/yaml-cpp/
-  icon: simple-cplusplus
   v12: true
   active: true
   pure: true
@@ -81,7 +119,6 @@ C#/.NET:
 - name: YamlDotNet
   desc: YAML 1.1/(1.2) library + serialization
   site: https://github.com/aaubry/YamlDotNet
-  icon: simple-dotnet
   yts: true
   play: dotnet
   active: true
@@ -91,126 +128,108 @@ C#/.NET:
 - name: yaml-net
   desc: YAML 1.1 library
   site: http://yaml-net-parser.sourceforge.net/
-  icon: simple-dotnet
 - name: Legivel
   desc: F# YAML 1.2 parser
   site: https://github.com/fjoppe/Legivel
-  icon: simple-dotnet
   plus: true
   v12: true
   pure: true
   license: Unlicense
-- ! yamlstar('https://www.nuget.org/packages/YAMLStar' 'simple-dotnet')
-- ! yamlscript('https://www.nuget.org/packages/YAMLScript' 'simple-dotnet')
+- ! yamlstar('https://www.nuget.org/packages/YAMLStar')
+- ! yamlscript('https://www.nuget.org/packages/YAMLScript')
 
 Clojure:
 - name: clj-yaml
   desc: YAML encoding and decoding for Clojure
   site: https://github.com/clj-commons/clj-yaml
-  icon: simple-clojure
   active: true
   pure: true
   license: EPL-1.0
-- ! yamlstar('https://clojars.org/org.yamlstar/yamlstar' 'simple-clojure')
-- ! yamlscript('https://clojars.org/org.yamlscript/yamlscript'
-               'simple-clojure')
+- ! yamlstar('https://clojars.org/org.yamlstar/yamlstar')
+- ! yamlscript('https://clojars.org/org.yamlscript/yamlscript')
 
 Common Lisp:
 - name: cl-yaml
   desc: YAML parser and emitter built on libyaml
   site: https://github.com/eudoxia0/cl-yaml
-  icon: material-code-braces
   plus: true
 
 Crystal:
 - name: YAML
   desc: YAML 1.1 from the standard library
   site: https://crystal-lang.org/api/latest/YAML.html
-  icon: material-language-cpp
   active: true
   license: Apache-2.0
-- ! yamlscript('https://github.com/yaml/yamlscript-crystal'
-               'material-language-cpp')
+- ! yamlscript('https://github.com/yaml/yamlscript-crystal')
 
 D:
 - name: D-YAML
   desc: YAML 1.1 library w/ official community support
   site: https://github.com/dlang-community/D-YAML
-  icon: simple-d
   yts: true
   active: true
   pure: true
   license: BSL-1.0
-- ! yamlscript('https://code.dlang.org/packages/yamlscript' 'simple-d')
+- ! yamlscript('https://code.dlang.org/packages/yamlscript')
 
 Dart:
 - name: yaml
   desc: YAML package for Dart
   site: https://pub.dev/packages/yaml
-  icon: simple-dart
   active: true
   pure: true
   license: BSD-3-Clause
-- ! yamlscript('https://pub.dev/packages/yamlscript' 'simple-dart')
+- ! yamlscript('https://pub.dev/packages/yamlscript')
 
-Delphi:
+Delphi / Free Pascal:
 - name: Neslib.Yaml
   desc: YAML 1.1 Delphi binding to libyaml
   site: https://github.com/neslib/Neslib.Yaml
-  icon: material-code-braces
   yts: true
 - name: Yaml.Json.Parser
   desc: YAML 1.1/1.2 and JSON pure Object Pascal parser
   site: https://github.com/biot2/Yaml.Json.Parser
-  icon: material-code-braces
   pure: true
   license: MIT
-- ! yamlstar('https://github.com/yaml/yamlstar-delphi' 'material-code-braces')
-- ! yamlscript('https://github.com/yaml/yamlscript-delphi'
-               'material-code-braces')
+- ! yamlstar('https://github.com/yaml/yamlstar-delphi')
+- ! yamlscript('https://github.com/yaml/yamlscript-delphi')
 
 Elixir:
 - name: yaml-elixir
   desc: YAML support for the Elixir language
   site: https://github.com/KamilLelonek/yaml-elixir
-  icon: simple-elixir
   active: true
   pure: true
   license: MIT
-- ! yamlscript('https://hex.pm/packages/yamlscript' 'simple-elixir')
+- ! yamlscript('https://hex.pm/packages/yamlscript')
 
 Erlang:
 - name: yamerl
   desc: YAML support for the Erlang language
   site: https://github.com/yakaz/yamerl
-  icon: simple-erlang
   active: true
   pure: true
   license: BSD-2-Clause
 - name: erl-yaml
   desc: YAML support for Erlang (based on libyaml)
   site: https://github.com/exograd/erl-yaml
-  icon: simple-erlang
   license: ISC
 
 Fortran:
 - name: yaFyaml
   desc: YAML 1.2 implementation in pure Fortran
   site: https://github.com/Goddard-Fortran-Ecosystem/yaFyaml
-  icon: material-code-braces
   v12: true
   active: true
   pure: true
   license: Apache-2.0
-- ! yamlstar('https://github.com/yaml/yamlstar-fortran' 'material-code-braces')
-- ! yamlscript('https://github.com/yaml/yamlscript-fortran'
-               'material-code-braces')
+- ! yamlstar('https://github.com/yaml/yamlstar-fortran')
+- ! yamlscript('https://github.com/yaml/yamlscript-fortran')
 
 Go:
 - name: Go-yaml
   desc: YAML support for the Go language
   site: https://github.com/yaml/go-yaml
-  icon: simple-go
   tycs: true
   play: goyaml
   active: true
@@ -220,26 +239,23 @@ Go:
 - name: Go-gypsy
   desc: Simplified YAML parser written in Go
   site: https://github.com/kylelemons/go-gypsy
-  icon: simple-go
   pure: true
   license: Apache-2.0
 - name: goccy/go-yaml
   desc: YAML 1.2 implementation in pure Go
   site: https://github.com/goccy/go-yaml
-  icon: simple-go
   v12: true
   active: true
   pure: true
   merge: true
   license: MIT
-- ! yamlstar('https://github.com/yaml/yamlstar-go' 'simple-go')
-- ! yamlscript('https://github.com/yaml/yamlscript-go' 'simple-go')
+- ! yamlstar('https://github.com/yaml/yamlstar-go')
+- ! yamlscript('https://github.com/yaml/yamlscript-go')
 
 Groovy:
 - name: YamlSlurper
   desc: Built-in YAML parser (Groovy 3+)
   site: https://groovy-lang.org/processing-yaml.html
-  icon: material-code-braces
   plus: true
   active: true
   pure: true
@@ -249,7 +265,6 @@ Haskell:
 - name: HsYAML
   desc: YAML 1.2 implementation in pure Haskell
   site: https://hackage.haskell.org/package/HsYAML
-  icon: simple-haskell
   yts: true
   play: hsyaml
   v12: true
@@ -259,23 +274,19 @@ Haskell:
 - name: YamlReference
   desc: Haskell 1.2 reference parser
   site: https://hackage.haskell.org/package/YamlReference
-  icon: simple-haskell
   play: refhs
   v12: true
   pure: true
 - name: yaml
   desc: YAML 1.1 Haskell framework (based on libyaml)
   site: https://hackage.haskell.org/package/yaml
-  icon: simple-haskell
   license: BSD-3-Clause
-- ! yamlscript('https://hackage.haskell.org/package/yamlscript'
-               'simple-haskell')
+- ! yamlscript('https://hackage.haskell.org/package/yamlscript')
 
 Java:
 - name: SnakeYAML Engine
   desc: Java 8+ / YAML 1.2
   site: https://bitbucket.org/snakeyaml/snakeyaml-engine
-  icon: material-language-java
   play: snakeeng
   v12: true
   active: true
@@ -285,7 +296,6 @@ Java:
 - name: SnakeYAML
   desc: Java 5 / YAML 1.1
   site: https://bitbucket.org/snakeyaml/snakeyaml
-  icon: material-language-java
   play: snake
   active: true
   pure: true
@@ -295,13 +305,11 @@ Java:
 - name: YamlBeans
   desc: To/from JavaBeans. YAML 1.0/1.1
   site: https://github.com/EsotericSoftware/yamlbeans
-  icon: material-language-java
   pure: true
   license: MIT
 - name: eo-yaml
   desc: YAML 1.2 for Java 8. Packaged as a Module (Java 9+)
   site: https://github.com/decorators-squad/eo-yaml
-  icon: material-language-java
   v12: true
   comments: true
   pure: true
@@ -309,20 +317,16 @@ Java:
 - name: Chronicle-Wire
   desc: Java Implementation
   site: https://github.com/OpenHFT/Chronicle-Wire
-  icon: material-language-java
   active: true
   pure: true
   license: Apache-2.0
-- ! yamlstar('https://central.sonatype.com/artifact/com.yaml/yamlstar'
-             'material-language-java')
-- ! yamlscript('https://clojars.org/org.yamlscript/yamlscript'
-               'material-language-java')
+- ! yamlstar('https://central.sonatype.com/artifact/com.yaml/yamlstar')
+- ! yamlscript('https://clojars.org/org.yamlscript/yamlscript')
 
 JavaScript:
 - name: yaml
   desc: JavaScript parser/stringifier (YAML 1.2, 1.1)
   site: https://github.com/eemeli/yaml
-  icon: simple-javascript
   yts: true
   play: npmyaml
   v12: true
@@ -335,7 +339,6 @@ JavaScript:
 - name: js-yaml
   desc: Native PyYAML port to JavaScript
   site: https://github.com/nodeca/js-yaml
-  icon: simple-javascript
   demo: https://nodeca.github.io/js-yaml/
   v12: true
   active: true
@@ -343,52 +346,45 @@ JavaScript:
   safe: true
   merge: true
   license: MIT
-- ! yamlstar('https://www.npmjs.com/package/yamlstar' 'simple-javascript')
-- ! yamlscript('https://www.npmjs.com/package/@yaml/yamlscript'
-               'simple-javascript')
+- ! yamlstar('https://www.npmjs.com/package/yamlstar')
+- ! yamlscript('https://www.npmjs.com/package/@yaml/yamlscript')
 
 Julia:
-- ! yamlscript('https://juliapackages.com/p/yamlscript' 'simple-julia')
+- ! yamlscript('https://juliapackages.com/p/yamlscript')
 
 Kotlin:
 - name: kaml
   desc: YAML 1.2 support for kotlinx.serialization
   site: https://github.com/charleskorn/kaml
-  icon: simple-kotlin
   plus: true
   v12: true
   license: Apache-2.0
 - name: yamlkt
   desc: Multiplatform YAML parser for kotlinx.serialization
   site: https://github.com/Him188/yamlkt
-  icon: simple-kotlin
   plus: true
   pure: true
   license: Apache-2.0
 - name: Hoplite
   desc: Kotlin config library with YAML support
   site: https://github.com/sksamuel/hoplite
-  icon: simple-kotlin
   plus: true
   active: true
   pure: true
   license: Apache-2.0
-- ! yamlscript('https://clojars.org/org.yamlscript/kotlin-yamlscript'
-               'simple-kotlin')
+- ! yamlscript('https://clojars.org/org.yamlscript/kotlin-yamlscript')
 
 Lua:
 - name: LuaYAML
   desc: Lua binding for libyaml
   site: https://github.com/arcapos/luayaml
-  icon: simple-lua
   active: true
-- ! yamlscript('https://github.com/yaml/yamlscript-lua' 'simple-lua')
+- ! yamlscript('https://github.com/yaml/yamlscript-lua')
 
-MATLAB:
+MATLAB / Octave:
 - name: jsonlab
   desc: YAML reader/writer for MATLAB and GNU Octave
   site: https://github.com/NeuroJSON/jsonlab
-  icon: material-code-braces
   active: true
   pure: true
   license: BSD-3-Clause
@@ -397,31 +393,27 @@ ML:
 - name: Yaml-Parser-in-PolyML
   desc: A YAML parser written for Poly/ML in Standard ML
   site: https://www.polyml.org/software/details.php?id=48
-  icon: material-code-braces
 
 Nim:
 - name: NimYAML
   desc: YAML 1.2 implementation in pure Nim
   site: https://nimyaml.org
-  icon: material-code-braces
   yts: true
   play: nimyaml
   v12: true
   active: true
   pure: true
   license: MIT
-- ! yamlscript('https://github.com/yaml/yamlscript-nim' 'material-code-braces')
+- ! yamlscript('https://github.com/yaml/yamlscript-nim')
 
 Objective-C:
 - name: YAML.framework
   desc: YAML support based on libyaml
   site: https://github.com/mirek/YAML.framework
-  icon: material-code-braces
   plus: true
 - name: YAML4ObjC
   desc: LibYAML wrapper with YPath query support
   site: https://github.com/cybergarage/YAML4ObjC
-  icon: material-code-braces
   plus: true
   license: BSD-3-Clause
 
@@ -429,25 +421,21 @@ OCaml:
 - name: ocaml-yaml
   desc: YAML 1.1/1.2 via libyaml bindings
   site: https://github.com/avsm/ocaml-yaml
-  icon: material-code-braces
   license: ISC
 - name: ocaml-syck
   desc: YAML 1.0 via syck bindings
   site: http://ocaml-syck.sourceforge.net
-  icon: material-code-braces
 
 Perl:
 - name: YAML::XS
   desc: XS binding to libyaml
   site: https://metacpan.org/release/YAML-LibYAML
-  icon: simple-perl
   tycs: true
   active: true
   license: Perl
 - name: YAML::PP
   desc: A pure Perl YAML 1.2/1.1 processor
   site: https://metacpan.org/release/YAML-PP
-  icon: simple-perl
   yts: true
   tycs: true
   play: ppyaml
@@ -459,27 +447,23 @@ Perl:
 - name: YAML::Syck
   desc: Binding to libsyck
   site: https://metacpan.org/release/YAML-Syck
-  icon: simple-perl
 - name: YAML::Tiny
   desc: A small YAML subset module
   site: https://metacpan.org/release/YAML-Tiny
-  icon: simple-perl
   pure: true
   license: Perl
 - name: YAML
   desc: Pure Perl YAML 1.0 Module
   site: https://metacpan.org/release/YAML
-  icon: simple-perl
   pure: true
   license: Perl
-- ! yamlstar('https://metacpan.org/pod/YAMLStar' 'simple-perl')
-- ! yamlscript('https://metacpan.org/pod/YAMLScript' 'simple-perl')
+- ! yamlstar('https://metacpan.org/pod/YAMLStar')
+- ! yamlscript('https://metacpan.org/pod/YAMLScript')
 
 PHP:
 - name: The Yaml Component
   desc: Symfony Yaml Component (YAML 1.2)
   site: https://symfony.com/doc/current/components/yaml.html
-  icon: simple-php
   v12: true
   active: true
   pure: true
@@ -488,23 +472,19 @@ PHP:
 - name: php-yaml
   desc: libyaml bindings (YAML 1.1)
   site: http://pecl.php.net/package/yaml
-  icon: simple-php
   license: MIT
 - name: syck
   desc: syck bindings (YAML 1.0)
   site: http://pecl.php.net/package/syck
-  icon: simple-php
 - name: spyc
   desc: yaml loader/dumper (YAML 1.?)
   site: https://github.com/mustangostang/spyc
-  icon: simple-php
   pure: true
   license: MIT
-- ! yamlscript('https://packagist.org/packages/yaml/yamlscript' 'simple-php')
+- ! yamlscript('https://packagist.org/packages/yaml/yamlscript')
 - name: PHP YAML Parser
   desc: A YAML 1.2 Parser for PHP
   site: https://github.com/taufik-nurrohman/y-a-m-l
-  icon: simple-php
   v12: true
   active: true
   pure: true
@@ -514,7 +494,6 @@ PowerShell:
 - name: powershell-yaml
   desc: PowerShell CmdLets for YAML manipulation
   site: https://github.com/cloudbase/powershell-yaml
-  icon: simple-powershell
   plus: true
   active: true
   pure: true
@@ -524,7 +503,6 @@ Python:
 - name: PyYAML
   desc: YAML 1.1, pure Python and libyaml binding
   site: http://pyyaml.org
-  icon: simple-python
   tycs: true
   play: pyyaml
   active: true
@@ -534,7 +512,6 @@ Python:
 - name: ruamel.yaml
   desc: YAML 1.2, update of PyYAML; comments round-trip
   site: https://pypi.python.org/pypi/ruamel.yaml
-  icon: simple-python
   play: ruamel
   v12: true
   active: true
@@ -546,52 +523,46 @@ Python:
 - name: strictyaml
   desc: Restricted YAML subset
   site: https://pypi.org/project/strictyaml/
-  icon: simple-python
   pure: true
   safe: true
   license: MIT
-- ! yamlstar('https://pypi.org/project/yamlstar/' 'simple-python')
-- ! yamlscript('https://pypi.org/project/yamlscript/' 'simple-python')
+- ! yamlstar('https://pypi.org/project/yamlstar/')
+- ! yamlscript('https://pypi.org/project/yamlscript/')
 
 R:
 - name: R YAML
   desc: libyaml wrapper
   site: https://github.com/viking/r-yaml
-  icon: simple-r
   active: true
   license: BSD-3-Clause
-- ! yamlscript('https://github.com/yaml/yamlscript-r' 'simple-r')
+- ! yamlscript('https://github.com/yaml/yamlscript-r')
 
 Raku:
 - name: YAMLish
   desc: Port of YAMLish to Raku
   site: https://github.com/Leont/yamlish
-  icon: material-code-braces
   active: true
   pure: true
   license: Artistic-2.0
 - name: YAML::Parser::LibYAML
   desc: LibYAML wrapper
   site: https://github.com/tony-o/perl6-libyaml
-  icon: material-code-braces
-- ! yamlscript('https://raku.land/zef:ingy/YAMLScript' 'material-code-braces')
+- ! yamlscript('https://raku.land/zef:ingy/YAMLScript')
 
 Ruby:
 - name: psych
   desc: libyaml wrapper (in Ruby core for 1.9.2)
   site: http://github.com/tenderlove/psych
-  icon: simple-ruby
   active: true
   safe: true
   merge: true
   license: MIT
-- ! yamlscript('https://rubygems.org/gems/yamlscript' 'simple-ruby')
+- ! yamlscript('https://rubygems.org/gems/yamlscript')
 
 Rust:
 - name: yaml-serde
   desc: YAML framework for the Rust language
   site: https://github.com/yaml/yaml-serde
-  icon: simple-rust
   tycs: true
   play: rustyaml
   active: true
@@ -600,7 +571,6 @@ Rust:
 - name: yaml-rust2
   desc: YAML 1.2 implementation in pure Rust (actively maintained)
   site: https://github.com/Ethiraric/yaml-rust2
-  icon: simple-rust
   v12: true
   active: true
   pure: true
@@ -608,26 +578,23 @@ Rust:
 - name: saphyr
   desc: Modern Rust crates for parsing YAML
   site: https://github.com/saphyr-rs/saphyr
-  icon: simple-rust
   v12: true
   active: true
   pure: true
 - name: serde-saphyr
   desc: Panic- and `unsafe`- free serde support
   site: https://github.com/bourumir-wyngs/serde-saphyr
-  icon: simple-rust
   yts: true
   active: true
   pure: true
   license: Apache-2.0
-- ! yamlstar('https://crates.io/crates/yamlstar' 'simple-rust')
-- ! yamlscript('https://crates.io/crates/yamlscript' 'simple-rust')
+- ! yamlstar('https://crates.io/crates/yamlstar')
+- ! yamlscript('https://crates.io/crates/yamlscript')
 
 Scala:
 - name: circe-yaml
   desc: YAML parser for circe using SnakeYAML
   site: https://github.com/circe/circe-yaml
-  icon: material-code-braces
   plus: true
   active: true
   pure: true
@@ -637,7 +604,6 @@ Scheme:
 - name: guile-libyaml
   desc: YAML module for Guile using libyaml
   site: https://github.com/mwette/guile-libyaml
-  icon: material-code-braces
   plus: true
   active: true
   license: LGPL-3.0
@@ -646,13 +612,11 @@ Shell:
 - name: parse_yaml
   desc: Simple YAML parser for Bash using sed and awk
   site: https://github.com/mrbaseman/parse_yaml
-  icon: material-console
   pure: true
   license: GPL-3.0
 - name: shyaml
   desc: Read YAML files - jq style
   site: https://pypi.org/project/shyaml/
-  icon: material-console
   active: true
   license: BSD-2-Clause
 
@@ -660,16 +624,14 @@ Swift:
 - name: Yams
   desc: libyaml wrapper
   site: https://github.com/jpsim/Yams
-  icon: simple-swift
   active: true
   license: MIT
-- ! yamlscript('https://github.com/yaml/yamlscript-swift' 'simple-swift')
+- ! yamlscript('https://github.com/yaml/yamlscript-swift')
 
 Tcl:
 - name: yaml
   desc: YAML processing with huddle support
   site: https://github.com/tcltk/tcllib/blob/master/modules/yaml/yaml.tcl
-  icon: material-code-braces
   plus: true
   active: true
   pure: true
@@ -678,7 +640,6 @@ TypeScript:
 - name: yaml
   desc: JavaScript/TypeScript YAML parser (YAML 1.2, 1.1)
   site: https://github.com/eemeli/yaml
-  icon: simple-typescript
   plus: true
   v12: true
   active: true
@@ -690,7 +651,6 @@ TypeScript:
 - name: js-yaml
   desc: YAML parser and serializer
   site: https://github.com/nodeca/js-yaml
-  icon: simple-typescript
   plus: true
   v12: true
   active: true
@@ -701,7 +661,6 @@ TypeScript:
 - name: yaml-thom
   desc: Experimental YAML 1.2 reference implementation
   site: https://github.com/Thom1729/yaml-thom
-  icon: simple-typescript
   plus: true
   v12: true
   pure: true
@@ -711,7 +670,6 @@ Typst:
 - name: yaml
   desc: YAML support built into Typst scripting language
   site: https://typst.app/docs/reference/data-loading/yaml/
-  icon: material-code-braces
   active: true
   license: Apache-2.0
 
@@ -719,7 +677,6 @@ V:
 - name: yaml
   desc: Strictly parse and format YAML data
   site: https://github.com/prantlf/v-yaml
-  icon: material-code-braces
   active: true
   license: MIT
 
@@ -727,14 +684,12 @@ Vim:
 - name: yamlvim
   desc: YAML dumper/emitter in pure vimscript
   site: http://www.vim.org/scripts/script.php?script_id=3190
-  icon: simple-vim
   pure: true
 
 Zig:
 - name: zig-yaml
   desc: YAML 1.2 parser for Zig
   site: https://github.com/kubkon/zig-yaml
-  icon: material-code-braces
   plus: true
   v12: true
   active: true
@@ -743,9 +698,8 @@ Zig:
 - name: ymlz
   desc: Small and convenient YAML parser for Zig
   site: https://github.com/pwbh/ymlz
-  icon: material-code-braces
   plus: true
   active: true
   pure: true
   license: Apache-2.0
-- ! yamlscript('https://github.com/yaml/yamlscript-zig' 'material-code-braces')
+- ! yamlscript('https://github.com/yaml/yamlscript-zig')
