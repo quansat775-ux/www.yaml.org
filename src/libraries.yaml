@@ -16,6 +16,7 @@ defn yamlstar(site)::
   site:: site
   tycs: true
   v12: true
+  safe: true
   active: true
   license: MIT
 
