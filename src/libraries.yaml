@@ -161,6 +161,7 @@ Crystal:
   site: https://crystal-lang.org/api/latest/YAML.html
   active: true
   license: Apache-2.0
+- ! yamlstar('https://github.com/yaml/yamlstar/tree/main/crystal')
 - ! yamlscript('https://github.com/yaml/yamlscript-crystal')
 
 D:
@@ -171,6 +172,7 @@ D:
   active: true
   pure: true
   license: BSL-1.0
+- ! yamlstar('https://github.com/yaml/yamlstar/tree/main/d')
 - ! yamlscript('https://code.dlang.org/packages/yamlscript')
 
 Dart:
@@ -180,6 +182,7 @@ Dart:
   active: true
   pure: true
   license: BSD-3-Clause
+- ! yamlstar('https://github.com/yaml/yamlstar/tree/main/dart')
 - ! yamlscript('https://pub.dev/packages/yamlscript')
 
 Delphi / Free Pascal:
@@ -202,6 +205,7 @@ Elixir:
   active: true
   pure: true
   license: MIT
+- ! yamlstar('https://hex.pm/packages/yamlstar')
 - ! yamlscript('https://hex.pm/packages/yamlscript')
 
 Erlang:
@@ -282,6 +286,7 @@ Haskell:
   desc: YAML 1.1 Haskell framework (based on libyaml)
   site: https://hackage.haskell.org/package/yaml
   license: BSD-3-Clause
+- ! yamlstar('https://hackage.haskell.org/package/yamlstar')
 - ! yamlscript('https://hackage.haskell.org/package/yamlscript')
 
 Java:
@@ -351,6 +356,7 @@ JavaScript:
 - ! yamlscript('https://www.npmjs.com/package/@yaml/yamlscript')
 
 Julia:
+- ! yamlstar('https://juliahub.com/ui/Packages/General/YAMLStar')
 - ! yamlscript('https://juliapackages.com/p/yamlscript')
 
 Kotlin:
@@ -373,6 +379,7 @@ Kotlin:
   active: true
   pure: true
   license: Apache-2.0
+- ! yamlstar('https://github.com/yaml/yamlstar/tree/main/kotlin')
 - ! yamlscript('https://clojars.org/org.yamlscript/kotlin-yamlscript')
 
 Lua:
@@ -380,6 +387,7 @@ Lua:
   desc: Lua binding for libyaml
   site: https://github.com/arcapos/luayaml
   active: true
+- ! yamlstar('https://luarocks.org/modules/ingy/yamlstar')
 - ! yamlscript('https://github.com/yaml/yamlscript-lua')
 
 MATLAB / Octave:
@@ -405,6 +413,7 @@ Nim:
   active: true
   pure: true
   license: MIT
+- ! yamlstar('https://github.com/yaml/yamlstar/tree/main/nim')
 - ! yamlscript('https://github.com/yaml/yamlscript-nim')
 
 Objective-C:
@@ -482,6 +491,7 @@ PHP:
   site: https://github.com/mustangostang/spyc
   pure: true
   license: MIT
+- ! yamlstar('https://packagist.org/packages/yaml/yamlstar-php')
 - ! yamlscript('https://packagist.org/packages/yaml/yamlscript')
 - name: PHP YAML Parser
   desc: A YAML 1.2 Parser for PHP
@@ -536,6 +546,7 @@ R:
   site: https://github.com/viking/r-yaml
   active: true
   license: BSD-3-Clause
+- ! yamlstar('https://github.com/yaml/yamlstar/tree/main/r')
 - ! yamlscript('https://github.com/yaml/yamlscript-r')
 
 Raku:
@@ -548,6 +559,7 @@ Raku:
 - name: YAML::Parser::LibYAML
   desc: LibYAML wrapper
   site: https://github.com/tony-o/perl6-libyaml
+- ! yamlstar('https://raku.land/zef:ingy/YAMLStar')
 - ! yamlscript('https://raku.land/zef:ingy/YAMLScript')
 
 Ruby:
@@ -558,6 +570,7 @@ Ruby:
   safe: true
   merge: true
   license: MIT
+- ! yamlstar('https://rubygems.org/gems/yamlstar')
 - ! yamlscript('https://rubygems.org/gems/yamlscript')
 
 Rust:
@@ -627,6 +640,7 @@ Swift:
   site: https://github.com/jpsim/Yams
   active: true
   license: MIT
+- ! yamlstar('https://github.com/yaml/yamlstar/tree/main/swift')
 - ! yamlscript('https://github.com/yaml/yamlscript-swift')
 
 Tcl:
@@ -703,4 +717,5 @@ Zig:
   active: true
   pure: true
   license: Apache-2.0
+- ! yamlstar('https://github.com/yaml/yamlstar/tree/main/zig')
 - ! yamlscript('https://github.com/yaml/yamlscript-zig')
